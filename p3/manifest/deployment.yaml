@@ -25,9 +25,10 @@ metadata:
   name: wil-app
   namespace: dev
 spec:
-  type: LoadBalancer
+  type: ClusterIP
+  selector:
+    app: wil-app
   ports:
   - protocol: TCP
     port: 8080
     targetPort: 8888
-  
